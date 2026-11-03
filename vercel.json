@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "NITRO_PRESET=vercel AGENT_NATIVE_RELEASE_MIGRATIONS=1 pnpm build && pnpm migrate:production"
+}

@@ -49,6 +49,16 @@ dev.cmd action get-desk --limit 3
 ```
 `.env` needs `GOOGLE_GENERATIVE_AI_API_KEY` (or another provider key), plus `AGENT_MODEL=gemini-3.5-flash-lite` on the free tier. `AUTH_DISABLED=true` is set for local use and the public demo.
 
+## Deploy (Vercel)
+`vercel.json` builds for Vercel and runs the database migrations. In the Vercel project:
+1. Add a free Postgres database from **Storage → Neon**. It sets `DATABASE_URL`.
+2. Set these settings:
+   - `GOOGLE_GENERATIVE_AI_API_KEY`
+   - `AGENT_MODEL=gemini-3.5-flash-lite`
+   - `AUTH_DISABLED=true` (the demo holds no personal data)
+   - `BETTER_AUTH_SECRET` (any long random string)
+3. Redeploy.
+
 ## Data and privacy
 - `shared/snapshot.ts` comes from a [County List Agent](../../county-list-agent/README.md) run, by `python scripts/build_snapshot.py`.
 - It's **masked**: house numbers are hidden, and there are no owner names, buyer names or mailing addresses.
