@@ -2,6 +2,8 @@
 
 A wholesaler's desk built on [Agent-Native](https://www.builder.io/hackathon). An agent reads a county's public foreclosure and tax-sale records, matches each record to a house, stacks the signals into a ranked call list, and lets you steer that list by talking to it. Drafts never leave the app until a person approves them.
 
+**Live demo:** https://deal-desk-jet-seven.vercel.app/home · scroll story: https://deal-desk-jet-seven.vercel.app/story.html
+
 The first county is Montgomery County, Tennessee (Clarksville). One run produced:
 - 92,436 assessor parcels;
 - 84 foreclosure notices;
