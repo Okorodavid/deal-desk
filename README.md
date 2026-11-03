@@ -60,7 +60,7 @@ dev.cmd action get-desk --limit 3
 3. Redeploy.
 
 ## Data and privacy
-- `shared/snapshot.ts` comes from a [County List Agent](../../county-list-agent/README.md) run, by `python scripts/build_snapshot.py`.
+- `shared/snapshot.ts` comes from a run of the County List Agent (a separate Python pipeline that pulls the county records), made by `python scripts/build_snapshot.py`.
 - It's **masked**: house numbers are hidden, and there are no owner names, buyer names or mailing addresses.
 - Sale-date signals (within 30 days, passed) are worked out from today's date.
 
